@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ud. Marshall - SASP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque,
+      .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/GWVfvdk.png" alt="Logo SASP" class="logo">
+    <h1>UNIDAD MARSHALL - UD. MARSHALL</h1>
+  </header>
+
+  <div class="franja">
+    Custodia con firmeza, traslado con honor: guardianes del orden judicial.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/IHScyY5.jpeg" alt="Marshall">
+      <div class="contenido">
+        <h2>Seguridad penitenciaria y traslado de alto riesgo</h2>
+        <p>
+          La Unidad Marshall se encarga de la gestión y ejecución de traslados de detenidos, control sobre la búsqueda y captura de los mismos, escoltas a prisioneros de alto perfil y operaciones judiciales. Su disciplina y apego al protocolo aseguran la integridad de los procedimientos legales, protegiendo tanto a los detenidos como al personal implicado.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/aRADwuU.jpeg" alt="Activación por orden judicial">
+      <div class="contenido">
+        <h2>¿Quién determina cuándo actúa la Unidad Marshall?</h2>
+        <p>
+          Su intervención se define por órdenes judiciales, coordinación con el Ministerio Público o por evaluación operativa ante riesgos asociados a un detenido. Son activados cuando la misión requiere seguridad reforzada y control absoluto.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/NQQy8jD.png" alt="Formación Marshall">
+      <div class="contenido">
+        <h2>¿Qué formación requiere un agente Marshall?</h2>
+        <p>
+          Debe dominar técnicas de custodia y traslado, conocer la legislación penal y judicial, tener habilidades en control de accesos y contención, además de aptitud psicológica para entornos de tensión legal y social. La disciplina es clave.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/UREM9Wd.jpeg" alt="Custodia armada">
+      <div class="contenido">
+        <h2>¿Los traslados se hacen siempre con escolta armada?</h2>
+        <p>
+          No siempre. La modalidad de traslado depende del nivel de peligrosidad del reo. En casos de alto perfil, la custodia incluye planificación previa, patrullas de refuerzo y estrictos controles tácticos. La seguridad del entorno es prioritaria.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

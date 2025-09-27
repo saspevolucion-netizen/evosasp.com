@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>S.E.R.T. - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque,
+      .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/AsMqk7N.png" alt="Logo SASP" class="logo">
+    <h1>SPECIAL EMERGENCY RESPONSE TEAM - S.E.R.T.</h1>
+  </header>
+
+  <div class="franja">
+    Intervención táctica con precisión, disciplina y compromiso.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/qFl5wlI.jpeg" alt="SERT">
+      <div class="contenido">
+        <h2>FUNCIÓN OPERATIVA</h2>
+        <p>
+          El equipo S.E.R.T. es una unidad táctica de élite especializada en intervenciones de alto riesgo, resolución de situaciones con rehenes, entradas dinámicas y apoyo a unidades en operaciones críticas. Formado por agentes altamente cualificados, el S.E.R.T. actúa cuando el margen de error es cero.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/bVnAo0x.jpeg" alt="Operaciones Críticas">
+      <div class="contenido">
+        <h2>¿Qué tipo de situaciones atiende el S.E.R.T.?</h2>
+        <p>
+          El equipo interviene en operaciones de alto riesgo como toma de rehenes, detenciones peligrosas, registros forzosos y brinda apoyo táctico a otras unidades cuando existe una amenaza crítica activa.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/QYIoN7j.jpeg" alt="Ingreso al SERT">
+      <div class="contenido">
+        <h2>¿Todos los agentes pueden formar parte del S.E.R.T.?</h2>
+        <p>
+          El ingreso está reservado a agentes con méritos destacados. Se requiere superar pruebas físicas, evaluaciones psicológicas rigurosas y formación especializada en intervención táctica de precisión.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/zyW0JZB.jpeg" alt="Equipo táctico">
+      <div class="contenido">
+        <h2>¿Qué equipo utiliza el S.E.R.T.?</h2>
+        <p>
+          Utilizan equipamiento táctico avanzado: armamento letal y no letal, chalecos de protección balística, dispositivos de apertura, drones de reconocimiento y tecnología de asalto controlado.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/QYKSYap.jpeg" alt="Colaboración con divisiones. CAMBIAR">
+      <div class="contenido">
+        <h2>¿El S.E.R.T. actúa solo o con otras divisiones?</h2>
+        <p>
+          S.E.R.T. colabora en estrecha coordinación con unidades como CNT, K9 o Asuntos Internos, dependiendo de la naturaleza del operativo. Su rol puede ser tanto principal como de apoyo táctico.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

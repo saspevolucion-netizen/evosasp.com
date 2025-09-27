@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>A.S.D. - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque,
+      .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/gN0e8BJ.png" alt="Logo SASP" class="logo" />
+    <h1>AIR SUPPORT DIVISION - A.S.D.</h1>
+  </header>
+
+  <div class="franja">
+    Vigilancia desde el cielo para proteger en tierra.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/t0oiVEe.jpeg" alt="Imagen ASD" />
+      <div class="contenido">
+        <h2>Sobrevuelo y Apoyo Aéreo Estratégico</h2>
+        <p>
+          La Air Support Division opera aeronaves destinadas a la vigilancia aérea, coordinación táctica, búsqueda de personas y soporte visual en operaciones especiales. Sus pilotos poseen formación avanzada, compromiso con la misión y un dominio total del espacio aéreo para asistir a los equipos de tierra en momentos clave.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/ye6GrPE.jpeg" alt="Helicópteros tácticos" />
+      <div class="contenido">
+        <h2>¿Qué tipo de aeronaves opera la A.S.D.?</h2>
+        <p>
+          Principalmente helicópteros ligeros de reconocimiento, equipados con cámaras térmicas y sistemas de rastreo. En situaciones críticas se despliegan aeronaves de mayor capacidad logística o apoyo táctico con autonomía extendida.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/yXjpVzA.jpeg" alt="Apoyo en operativos" />
+      <div class="contenido">
+        <h2>¿En qué operaciones participa A.S.D.?</h2>
+        <p>
+          A.S.D. apoya en persecuciones, búsqueda de desaparecidos, seguimiento de sospechosos, cobertura de eventos multitudinarios, control de fronteras y cualquier despliegue donde una vista aérea mejore la táctica y seguridad.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/uOlckrk.jpeg" alt="Formación de pilotos" />
+      <div class="contenido">
+        <h2>¿Qué formación necesitan los pilotos?</h2>
+        <p>
+          Se exige licencia oficial de piloto, experiencia de vuelo demostrable, dominio en coordinación aérea-policial, orientación táctica, maniobras evasivas, lectura del terreno y respuesta en condiciones climáticas adversas.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/RjaJmT3.jpeg" alt="Cobertura aérea" />
+      <div class="contenido">
+        <h2>¿Son públicos los sobrevuelos?</h2>
+        <p>
+          No. Los vuelos tácticos y misiones de vigilancia son confidenciales por razones de seguridad. Sin embargo, el departamento difunde contenido visual con fines informativos y de transparencia institucional cuando es posible.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

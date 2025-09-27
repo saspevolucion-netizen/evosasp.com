@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>H.P.D. - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: left;
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque,
+      .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/ZfRftpW.png" alt="Logo SASP" class="logo">
+    <h1>HIGHWAY PATROL DIVISION - H.P.D.</h1>
+  </header>
+
+  <div class="franja">
+    Vigilancia, velocidad y seguridad en cada kilómetro patrullado.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/I5SwjqX.jpeg" alt="Vigilancia Vial" />
+      <div class="contenido">
+        <h2>Vigilancia y Control Vial</h2>
+        <p>
+          La división de patrullas de autopistas tiene como objetivo garantizar la seguridad del tráfico en las principales vías del estado. Sus agentes están entrenados para intervenir con rapidez ante infracciones, persecuciones, accidentes o tareas de escolta. La Highway Patrol Division es la primera línea en prevención y control vial.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/KpeKuMd.jpeg" alt="Cumplimiento de Leyes" />
+      <div class="contenido">
+        <h2>¿Cuál es la función principal de la H.P.D.?</h2>
+        <p>
+          Patrullar y controlar las carreteras estatales, asegurando el cumplimiento de las leyes de tráfico, la fluidez vehicular y la prevención de accidentes graves. Su presencia disuasoria mantiene el orden en la red vial del estado.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/JauyQVT.jpeg" alt="Persecuciones Tácticas" />
+      <div class="contenido">
+        <h2>¿Cómo actúa la H.P.D. en una persecución?</h2>
+        <p>
+          Aplica protocolos especializados en maniobras evasivas, bloqueos estratégicos y cierres de ruta. La coordinación con unidades terrestres y aéreas garantiza operaciones seguras con mínima exposición ciudadana.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/8RI4WxG.jpeg" alt="Operativos Móviles" />
+      <div class="contenido">
+        <h2>¿La H.P.D. puede colaborar en otros operativos?</h2>
+        <p>
+          Sí. La H.P.D. brinda apoyo en retenes interdepartamentales, escoltas de alto nivel y despliegues rápidos con cobertura en entornos de alta movilidad. Su entrenamiento permite adaptarse a escenarios urbanos o rurales con eficiencia.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/Jz8Y6Al.jpeg" alt="Vehículos HPD" />
+      <div class="contenido">
+        <h2>¿Qué vehículos utiliza esta división?</h2>
+        <p>
+          Patrullas de alto rendimiento con radar, ciclomotores ligeros para acceso ágil y unidades equipadas con tecnología de rastreo, intercomunicadores y señalización lumínica. Todo para responder rápido y con visibilidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver" style="text-align: center; margin: 50px 0;">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

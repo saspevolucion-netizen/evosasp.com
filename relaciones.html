@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Relaciones Institucionales - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropTitle 1s ease forwards;
+    }
+
+    @keyframes dropTitle {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .box.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .box img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .box-content {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .box-content h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .box-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      text-align: center;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    .faq-toggle {
+      text-align: center;
+      font-size: 18px;
+      color: #003366;
+      margin: 60px 0 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .faq-toggle:hover {
+      color: #005fa3;
+    }
+
+    .faq {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+      background-color: white;
+      border-radius: 8px;
+      padding: 0 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .faq.open {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 30px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item strong {
+      display: block;
+      color: #004477;
+      margin-bottom: 6px;
+    }
+
+    .faq-item li {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #333;
+      list-style: none;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        flex-direction: column;
+      }
+
+      .box.reverse {
+        flex-direction: column;
+      }
+
+      .box img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/duY3QGL.png" alt="Logo SASP" class="logo">
+    <h1>RELACIONES INSTITUCIONALES - O.F.C.O.M.</h1>
+  </header>
+
+  <div class="franja">
+    Escuchamos, apoyamos y colaboramos: así construimos confianza.
+  </div>
+
+  <div class="container">
+
+    <div class="box">
+      <img src="https://i.imgur.com/BKNKrHw.jpeg" alt="Reinserción Social">
+      <div class="box-content">
+        <h2>REINSERCIÓN SOCIAL</h2>
+        <p>Actualmente, existe un programa activo relacionado con la reinserción social.<br>
+        Para proceder con ella, deberás rellenar el siguiente formulario y esperar una respuesta por parte de nuestros agentes encargados de tu caso.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpsdB-DvekR7MpmfpFV75CAwOTGzDBLW47u45vjy3y9XquCw/viewform" class="btn" target="_blank">¡FORMULARIO REINSERCIÓN SOCIAL!</a>
+      </div>
+    </div>
+
+    <div class="box reverse">
+      <img src="https://i.imgur.com/1MGTdRc.jpeg" alt="Asistencia a eventos">
+      <div class="box-content">
+        <h2>ASISTENCIA A EVENTOS</h2>
+        <p>También mantenemos una relación con locales y sus eventos, contamos con un equipo preparado para acudir como apoyo a los mismos.<br>
+        ¡No dudes en contar con nosotros para garantizar la seguridad y tranquilidad durante tu celebración!</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg6unOR4uAf4M-Rmg4LEiYLrRGiTmJW75UbeDfDq7qKCkcXg/viewform" class="btn" target="_blank">¡FORMULARIO PARA LA ASISTENCIA A EVENTOS!</a>
+      </div>
+    </div>
+
+    <div class="faq-toggle" onclick="toggleFAQ()" id="faq-toggle">
+      <span id="faq-label">▼ --- F.A.Q. --- ▼</span>
+    </div>
+
+    <div class="faq" id="faq-section">
+      <div class="faq-item">
+        <strong>¿Qué tipo de eventos cubre la unidad de relaciones institucionales?</strong>
+        <li>Desde inauguraciones y festivales hasta galas privadas o actos públicos de relevancia. Siempre que exista necesidad de acompañamiento institucional.</li>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Cómo solicito la asistencia oficial para un evento?</strong>
+        <li>Debes rellenar el formulario indicado en esta página con antelación. Nuestro equipo evaluará la viabilidad y responderá a la solicitud.</li>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Puede cualquier persona solicitar reinserción social?</strong>
+        <li>Sí, siempre y cuando se encuentre en situación de cumplimiento legal y tenga voluntad activa de reintegrarse a la sociedad con honestidad.</li>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Qué sucede tras enviar el formulario de reinserción?</strong>
+        <li>Un agente revisará la información aportada y se pondrá en contacto para valorar tu situación en entrevista confidencial. Cada caso se estudia individualmente.</li>
+      </div>
+    </div>
+
+  </div> <!-- Cierre del container -->
+
+  <div class="volver">
+    <a href="index.html" class="btn">🡰 Volver a la página de inicio</a>
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo — Todos los derechos reservados
+  </footer>
+
+   <script>
+    function toggleFAQ() {
+      const faq = document.getElementById("faq-section");
+      const label = document.getElementById("faq-label");
+
+      faq.classList.toggle("open");
+
+      if (faq.classList.contains("open")) {
+        label.textContent = "▲ --- F.A.Q. --- ▲";
+      } else {
+        label.textContent = "▼ --- F.A.Q. --- ▼";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Oposita - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropTitle 1s ease forwards;
+    }
+
+    @keyframes dropTitle {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .bloque-contenido {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bloque-contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .bloque-contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      text-align: center;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    .faq-toggle {
+      text-align: center;
+      font-size: 18px;
+      color: #003366;
+      margin: 60px 0 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .faq-toggle:hover {
+      color: #005fa3;
+    }
+
+    .faq {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+      background-color: white;
+      border-radius: 8px;
+      padding: 0 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .faq.open {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 30px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item strong {
+      display: block;
+      color: #004477;
+      margin-bottom: 6px;
+    }
+
+    .faq-item ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .faq-item ul li {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .bloque {
+        flex-direction: column;
+      }
+
+      .bloque.reverso {
+        flex-direction: column;
+      }
+
+      .bloque img {
+        max-width: 100%;
+      }
+
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/9jD01e3.png" alt="Logo RTD" class="logo">
+    <h1>RECRUITMENT AND TRAINING DIVISION - R.T.D.</h1>
+  </header>
+
+  <div class="franja">
+    Aquí comienza la diferencia: forma parte del cambio.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/O22btnw.jpeg" alt="Cómo opositar">
+      <div class="bloque-contenido">
+        <h2 id="como-opositar">¿Cómo opositar?</h2>
+        <p>Para formar parte del SASP, el primer paso es completar el formulario de inscripción cuando se anuncie oficialmente la apertura de plazas. Superada esta etapa inicial, serás convocado a las pruebas físicas, donde demostrarás tu preparación y resistencia.</p>
+        <p>Finalmente, afrontarás los exámenes de acceso que cierran el proceso de preselección. Si logras superar todas las fases… ¡enhorabuena! Habrás sido admitido en la academia y comenzará tu camino dentro del departamento.</p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/8wabiGq.jpeg" alt="Requisitos">
+      <div class="bloque-contenido">
+        <h2 id="requisitos">Requisitos de acceso</h2>
+        <p>• Ser mayor de edad y ciudadano legal de San Andreas.<br>
+           • No poseer antecedentes penales graves.<br>
+           • Estar en plenas condiciones físicas y psíquicas.<br>
+           • Pasar las pruebas establecidas por la comisión de ingreso.<br>
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/iemzzoZ.jpeg" alt="Fecha de apertura">
+      <div class="bloque-contenido">
+        <h2 id="proximas">Próximas oposiciones</h2>
+        <p>Las oposiciones para acceder al SASP, correspondientes a la 53ª promoción, aún no se encuentran abiertas. La convocatoria oficial será anunciada próximamente, junto con todos los requisitos y plazos necesarios para participar en el proceso. Toda la información relevante será comunicada exclusivamente a través de los canales oficiales, como esta página web y las redes institucionales del cuerpo.</p>
+      </div>
+    </div>
+
+    <div class="faq-toggle" onclick="toggleFAQ()" id="faq-toggle">
+      <span id="faq-label">▼ --- F.A.Q. --- ▼</span>
+    </div>
+
+    <div class="faq" id="faq-section">
+      <div class="faq-item">
+        <strong>¿Puedo opositar si tengo otro empleo?</strong>
+        <ul>
+          <li>Podrás iniciar el proceso de oposición incluso si te encuentras trabajando en otro puesto dentro de Los Santos. No obstante, en caso
+                  </ul>
+    </div>
+
+    <div class="faq-item">
+      <strong>¿Se puede repetir el proceso si suspendo?</strong>
+      <ul>
+        <li>Sí, podrías inscribirte en la siguiente convocatoria.</li>
+        <li>No hay límite de intentos, siempre que cumplas los requisitos.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <strong>¿Qué ocurre si tengo tatuajes?</strong>
+      <ul>
+        <li>No están prohibidos en general. En caso de que dichos tatuajes se presenten en extremidades visibles como piernas, brazos, cuello o nuca, deberán ser retirados, independientemente de que no representen valores ideológicos o religiosos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="volver">
+    <a href="index.html" class="btn">🡰 Volver a la página de inicio</a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; Página web desarrollada por Gallegoo — Todos los derechos reservados
+</footer>
+
+<script>
+  function toggleFAQ() {
+    const faq = document.getElementById("faq-section");
+    const label = document.getElementById("faq-label");
+
+    faq.classList.toggle("open");
+
+    if (faq.classList.contains("open")) {
+      label.textContent = "▲ --- F.A.Q. --- ▲";
+    } else {
+      label.textContent = "▼ --- F.A.Q. --- ▼";
+    }
+  }
+</script>
+
+</body>
+</html>

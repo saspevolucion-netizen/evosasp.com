@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre nosotros - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropTitle 1s ease forwards;
+    }
+
+    @keyframes dropTitle {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .container {
+      height: calc(100vh - 180px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 40px 20px 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .box p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 30px;
+      animation: fadeIn 2.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" class="logo" />
+    <h1>SOBRE NOSOTROS</h1>
+  </header>
+
+  <div class="franja">
+    Misión, valores y compromiso institucional con San Andreas.
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <p>
+        San Andreas State Police es una entidad estatal de carácter civil y disciplinado, destinada a preservar el orden público, garantizar la seguridad de los ciudadanos y hacer cumplir la ley en cada rincón de nuestro territorio.
+      </p>
+      <p>
+        Nuestro compromiso es servir con integridad, actuar con imparcialidad y proteger con determinación. A lo largo de los años, hemos evolucionado desde una agrupación en Sandy Shores hasta convertirnos en una institución de referencia a nivel estatal, integrada por profesionales altamente capacitados y unidades especializadas.
+      </p>
+      <p>
+        Creemos en la proximidad al ciudadano, la transparencia institucional y el trabajo en conjunto con las comunidades. En tiempos de crisis, emergencia o desarrollo social, nuestros agentes están presentes: firmes, preparados y dedicados a su deber.
+      </p>
+      <p>
+        Más que un departamento policial, el SASP representa los valores de honor, lealtad y justicia que fortalecen el tejido social de San Andreas.
+      </p>
+    </div>
+
+    <div class="volver">
+      <a href="index.html" class="btn">🡰 Volver a la página de inicio</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo — Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

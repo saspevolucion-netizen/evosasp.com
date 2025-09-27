@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unidad Marítima - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque,
+      .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/nbVwm5E.png" alt="Logo SASP" class="logo">
+    <h1>UNIDAD MARÍTIMA - U.M.</h1>
+  </header>
+
+  <div class="franja">
+    Vigilancia costera, seguridad fluvial y dominio del entorno marítimo.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/ATVVk25.jpeg" alt="Unidad Marítima">
+      <div class="contenido">
+        <h2>Patrullaje y respuesta en entornos acuáticos</h2>
+        <p>
+          La Unidad Marítima es responsable de garantizar el control, seguridad y supervisión de costas, ríos y zonas navegables del estado. Operando en embarcaciones rápidas y dotados de equipos especializados, sus agentes aseguran el cumplimiento de normas náuticas, brindan asistencia ante emergencias y combaten actividades ilegales en aguas jurisdiccionales.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/kPVQtJU.jpeg" alt="Funciones costeras">
+      <div class="contenido">
+        <h2>¿Qué funciones cumple la Unidad Marítima?</h2>
+        <p>
+          Prevención del delito costero, rescates acuáticos, inspección de documentación de embarcaciones, control antidrogas, persecuciones náuticas, apoyo en eventos marítimos y presencia disuasoria constante en zonas de actividad fluvial o portuaria.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/dUEtBL5.jpeg" alt="Formación UM">
+      <div class="contenido">
+        <h2>¿Se necesita experiencia para integrar la U.M.?</h2>
+        <p>
+          Sí. Los agentes deben tener conocimientos en navegación básica, mecánica de embarcaciones, legislación marítima y superar pruebas físicas adaptadas al entorno acuático. Se valora formación previa en salvamento, buceo o primeros auxilios en agua.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/3S8XmHi.jpeg" alt="Patrullajes nocturnos">
+      <div class="contenido">
+        <h2>¿La U.M. opera por la noche?</h2>
+        <p>
+          Absolutamente. Se realizan patrullajes nocturnos y en condiciones adversas, especialmente en zonas pesqueras o de tráfico sospechoso. La U.M. está activa 24/7, según clima, alertas y perfil de riesgo de cada región náutica.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/afpQxli.jpeg" alt="Solicitar asistencia UM">
+      <div class="contenido">
+        <h2>¿Puedo solicitar ayuda en el mar?</h2>
+        <p>
+          Por supuesto. Si detectas un comportamiento inusual o necesitas asistencia en el mar, puedes contactar a través de los canales oficiales por radio o señal visual. La U.M. patrulla activamente y está lista para intervenir o apoyar en rescates y emergencias.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

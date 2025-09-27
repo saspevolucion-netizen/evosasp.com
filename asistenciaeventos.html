@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asistencia a Eventos - S.A.S.P.</title>
+  <style>
+    body { margin: 0; background-color: #f1f1f1; font-family: Arial, sans-serif; }
+    .encabezado {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 25px;
+    }
+    .encabezado img {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+    .encabezado h1 {
+      font-size: 26px;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .encabezado p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 14px;
+    }
+    .contenido {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px 25px;
+      color: #333;
+    }
+    .contenido h2 {
+      color: #002244;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .volver {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: none;
+      z-index: 1000;
+    }
+    .volver a {
+      background-color: #002244;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+    .volver a:hover {
+      background-color: #004080;
+    }
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="encabezado">
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" />
+    <h1>SAN ANDREAS STATE POLICE</h1>
+    <p>Servir y Proteger · Obey and Survive</p>
+  </div>
+
+  <section class="contenido">
+    <h2>Asistencia a Eventos Oficiales</h2>
+    <p>
+      El SASP colabora con el sector público y privado asistiendo a eventos institucionales, escolares, culturales y comunitarios. Nuestra presencia busca reforzar la cercanía ciudadana y fomentar la cultura de la seguridad.
+    </p>
+    <p>
+      Cada convocatoria se evalúa en función del impacto social, los recursos disponibles y la zona geográfica. Las unidades más involucradas suelen ser K9, Relaciones Institucionales, Unidad de Montaña y el Departamento de Formación.
+    </p>
+    <p>
+      Si deseas solicitar la asistencia del SASP a un evento, pronto habilitaremos un formulario específico para tal fin. Mientras tanto, puedes contactarnos directamente a través de nuestro portal de atención ciudadana.
+    </p>
+  </section>
+
+  <div class="volver" id="volverBtn">
+    <a href="index.html">← Volver al menú principal</a>
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+  <script>
+    const volverBtn = document.getElementById("volverBtn");
+    window.addEventListener("scroll", () => {
+      const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+      volverBtn.style.display = window.scrollY >= scrollMax - 20 ? "block" : "none";
+    });
+  </script>
+
+</body>
+</html>

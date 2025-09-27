@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área de Prensa - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Lexend', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .intro-box {
+      background-color: rgba(255, 255, 255, 0.97);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .intro-box p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .secciones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+    }
+
+    .bloque h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .bloque p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .bloque a {
+      display: inline-block;
+      padding: 8px 14px;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .bloque a.boletines { background-color: #005f73; }
+    .bloque a.galas     { background-color: #264653; }
+    .bloque a.eventos   { background-color: #2a9d8f; }
+    .bloque a.fotos     { background-color: #e76f51; }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .secciones {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" class="logo" />
+    <h1>ÁREA DE PRENSA</h1>
+  </header>
+
+  <div id="particles-js"></div>
+
+  <main>
+    <div class="intro-box" data-aos="fade-up" data-aos-delay="200">
+      <p>
+        El Departamento de Prensa de la San Andreas State Police se encarga de comunicar, documentar y difundir todas las actividades oficiales del cuerpo. Desde boletines informativos hasta cobertura de eventos y galas, nuestra misión es mantener informada a la ciudadanía y preservar la memoria institucional.
+      </p>
+    </div>
+
+    <section class="secciones">
+      <div class="bloque" data-aos="fade-right" data-aos-delay="300">
+        <h3>Boletines</h3>
+        <p>Publicaciones periódicas con novedades, comunicados y resoluciones oficiales.</p>
+        <a href="boletines.html" class="boletines">📄 Explorar boletines</a>
+      </div>
+      <div class="bloque" data-aos="fade-left" data-aos-delay="400">
+        <h3>Galas</h3>
+        <p>Resumen de ceremonias, reconocimientos y actos institucionales destacados.</p>
+        <a href="galas.html" class="galas">🎖️ Descubrir galas</a>
+      </div>
+      <div class="bloque" data-aos="fade-right" data-aos-delay="500">
+        <h3>Eventos</h3>
+        <p>Actividades públicas, colaboraciones y operativos especiales organizados por SASP.</p>
+        <a href="eventos.html" class="eventos">📅 Ver próximos eventos</a>
+      </div>
+      <div class="bloque" data-aos="fade-left" data-aos-delay="600">
+        <h3>Fotos</h3>
+        <p>Galería visual de momentos importantes, operativos y vida diaria del cuerpo.</p>
+        <a href="fotos.html" class="fotos">📸 Entrar a la galería</a>
+      </div>
+    </section>
+
+    <a href="index.html" class="btn" data-aos="fade-up" data-aos-delay="700">🡰 Volver a la página de inicio</a>
+  </main>
+
+  <footer data-aos="fade-in" data-aos-delay="800">
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: "#003366" },
+        line_linked: { enable: true, color: "#003366" },
+        move: { speed: 1 }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

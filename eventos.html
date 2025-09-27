@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eventos Oficiales - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #002244, #f1f1f1);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      padding: 30px;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .box h2 {
+      color: #003366;
+      margin-top: 0;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .box p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" class="logo" />
+    <h1>EVENTOS INSTITUCIONALES</h1>
+  </header>
+
+  <div class="franja">
+    Actividades comunitarias, formativas y de representación del SASP.
+  </div>
+
+  <div class="container">
+
+    <div class="box">
+      <h2>PRÓXIMAMENTE</h2>
+      <p>
+        Estamos preparando nuevas actividades que fortalecerán el vínculo entre el cuerpo policial y la comunidad. ¡Mantente atento!
+      </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; animation: fadeIn 1.5s ease forwards;">
+      <a href="prensa.html" class="btn">📰 - Volver al área de prensa</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

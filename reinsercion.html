@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reinserción Social - S.A.S.P.</title>
+  <style>
+    body { margin: 0; background-color: #f1f1f1; font-family: Arial, sans-serif; }
+    .encabezado {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 25px;
+    }
+    .encabezado img {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+    .encabezado h1 {
+      font-size: 26px;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .encabezado p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 14px;
+    }
+    .contenido {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px 25px;
+      color: #333;
+    }
+    .contenido h2 {
+      color: #002244;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .volver {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: none;
+      z-index: 1000;
+    }
+    .volver a {
+      background-color: #002244;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+    .volver a:hover {
+      background-color: #004080;
+    }
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="encabezado">
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" />
+    <h1>SAN ANDREAS STATE POLICE</h1>
+    <p>Servir y Proteger · Obey and Survive</p>
+  </div>
+
+  <section class="contenido">
+    <h2>Programa de Reinserción Social</h2>
+    <p>
+      El SASP trabaja activamente para facilitar la reinserción de personas que han cumplido condenas, brindándoles oportunidades formativas, seguimiento psicosocial y acompañamiento profesional.
+    </p>
+    <p>
+      Nuestra colaboración con instituciones penitenciarias, ONGs y programas estatales permite ofrecer talleres, capacitaciones laborales y compromisos de reintegración comunitaria en diferentes condados.
+    </p>
+    <p>
+      La reinserción no solo reduce la reincidencia, sino que fortalece el tejido social y ofrece nuevas oportunidades a quienes buscan un camino digno. El SASP está comprometido con esta causa, protegiendo sin prejuicios y promoviendo segundas oportunidades.
+    </p>
+  </section>
+
+  <div class="volver" id="volverBtn">
+    <a href="index.html">← Volver al menú principal</a>
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+  <script>
+    const volverBtn = document.getElementById("volverBtn");
+    window.addEventListener("scroll", () => {
+      const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+      volverBtn.style.display = window.scrollY >= scrollMax - 20 ? "block" : "none";
+    });
+  </script>
+
+</body>
+</html>

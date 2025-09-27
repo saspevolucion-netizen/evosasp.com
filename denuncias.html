@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Denuncias - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropTitle 1s ease forwards;
+    }
+
+    @keyframes dropTitle {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header img {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .comisaria {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .comisaria.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .comisaria img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .btn-form {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .btn,
+    .btn-form a {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn:hover,
+    .btn-form a:hover {
+      background-color: #005fa3;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .comisaria, .comisaria.reverso {
+        flex-direction: column;
+      }
+
+      .comisaria img {
+        max-width: 100%;
+      }
+
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" />
+    <h1>DENUNCIAS</h1>
+  </header>
+
+  <div class="franja">
+    Protegemos a la ciudadanía. Tu denuncia es escuchada.
+  </div>
+
+  <div class="container">
+
+    <div class="comisaria">
+      <img src="https://i.imgur.com/EYtjfGS.png" alt="Denuncia Suceso" />
+      <div class="contenido">
+        <h2 id="suceso">Denuncia sobre un suceso</h2>
+        <p>
+          Si has sido testigo o víctima de un hecho delictivo o comportamiento sospechoso en San Andreas, puedes reportarlo a través del formulario oficial de denuncias por suceso. Tu declaración será revisada por los agentes, y en caso de ser necesaria tu colaboración, se pondrán en contacto contigo.
+        </p>
+        <div class="btn-form">
+          <a href="https://forms.gle/h8sRhponv86sDuiPA" target="_blank">DENUNCIA UN SUCESO</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="comisaria reverso">
+      <img src="https://i.imgur.com/CQx24Vu.png" alt="Denuncia Agente" />
+      <div class="contenido">
+        <h2 id="agente">Denuncia a un agente</h2>
+        <p>
+          La San Andreas State Police promueve la integridad y transparencia en su cuerpo. Si consideras que un agente ha actuado de forma indebida, puedes presentar una denuncia formal. Esta será evaluada por Asuntos Internos, garantizando total anonimato, confidencialidad y eficacia en su investigación.
+        </p>
+        <div class="btn-form">
+          <a href="https://forms.gle/UoGickPhYeetdPjZ9" target="_blank">DENUNCIA A UN AGENTE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="index.html" class="btn">🡰 Volver a la página de inicio</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Gallego ™ · San Andreas State Police · Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

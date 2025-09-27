@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>K.9 - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque, .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/Jwo5PUI.png" alt="Logo SASP" class="logo">
+    <h1>UNIDAD CANINA - K.9</h1>
+  </header>
+
+  <div class="franja">
+    Olfato, lealtad y precisión: binomios al servicio de la justicia.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/l4SgOP2.jpeg" alt="K9 en acción">
+      <div class="contenido">
+        <h2>Servicio Cinológico Operativo</h2>
+        <p>
+          La Unidad K.9. es una división táctica compuesta por binomios de agentes y perros entrenados para rastreo de personas, detección de sustancias ilegales, control de multitudes y apoyo en operaciones especiales. La coordinación entre guía y canino es la clave del éxito operativo, aportando un recurso olfativo y táctico de valor inigualable.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/vQhn7iK.jpeg" alt="Razas de la unidad">
+      <div class="contenido">
+        <h2>¿Qué tipo de perros conforman la Unidad K.9.?</h2>
+        <p>
+          Principalmente razas como el pastor alemán, belga malinois y labrador retriever, seleccionadas por su inteligencia, docilidad, capacidad de concentración y condición física. Cada ejemplar es sometido a pruebas de aptitud y entrenamiento desde su incorporación.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/qvyVnIQ.jpeg" alt="Demostración táctica">
+      <div class="contenido">
+        <h2>¿Puede participar la unidad en eventos públicos?</h2>
+        <p>
+          Sí. A través de solicitud formal, la unidad K.9. puede realizar demostraciones en colegios, actos cívicos o simulacros. Esto permite acercar a la ciudadanía el valor del trabajo conjunto entre humanos y caninos en el mantenimiento de la seguridad.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/lvNQ0T7.jpeg" alt="Binomio operativo">
+      <div class="contenido">
+        <h2>¿Cada agente trabaja con un solo perro?</h2>
+        <p>
+          Generalmente sí. Se establece un vínculo operativo único donde el guía conoce el temperamento, señales y capacidades del animal. Esta conexión fortalece la precisión y el entendimiento mutuo en escenarios reales.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/gmTssFH.jpeg" alt="Formación de guías">
+      <div class="contenido">
+        <h2>¿Qué formación reciben los guías?</h2>
+        <p>
+          Los agentes reciben capacitación en obediencia avanzada, manejo táctico del canino, psicología animal, primeros auxilios veterinarios y legislación sobre tenencia responsable y actuación cinológica. La formación constante es esencial para preservar el binomio como recurso activo y confiable.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

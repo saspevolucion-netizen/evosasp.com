@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comisarías - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropTitle 1s ease forwards;
+    }
+
+    @keyframes dropTitle {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header img {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .comisaria {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .comisaria:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+
+    .comisaria:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .comisaria img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .comisaria.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .comisaria, .comisaria.reverso {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" />
+    <h1>COMISARÍAS · S.A.S.P.</h1>
+  </header>
+
+  <div class="franja">
+    Presencia táctica en todo el estado: así protegemos San Andreas.
+  </div>
+
+  <div class="container">
+
+    <div class="comisaria">
+      <img src="https://i.imgur.com/ODl7Klp.jpeg" alt="Mission Row" />
+      <div class="contenido">
+        <h2 id="mission">Mission Row</h2>
+        <p>
+          Situada en el corazón de Los Santos, la Comisaría de Mission Row es el centro neurálgico de operaciones urbanas. Desde aquí se coordinan patrullas metropolitanas, respuesta rápida y acciones especiales en conjunto con divisiones tácticas. Su infraestructura avanzada permite una atención eficiente y segura al ciudadano.
+        </p>
+      </div>
+    </div>
+
+    <div class="comisaria reverso">
+      <img src="https://i.imgur.com/BdOXasf.jpeg" alt="Sandy Shores" />
+      <div class="contenido">
+        <h2 id="sandy">Sandy Shores</h2>
+        <p>
+          A las afueras de la ciudad, Sandy Shores es la comisaría encargada de cubrir la región del desierto de Blaine County. Su equipo especializado responde ante crímenes rurales, tráfico de sustancias y operaciones en ambientes hostiles. El entorno natural exige disciplina, templanza y versatilidad operativa.
+        </p>
+      </div>
+    </div>
+
+    <div class="comisaria">
+      <img src="https://i.imgur.com/QAZEpON.jpeg" alt="Roxwood Hills" />
+      <div class="contenido">
+        <h2 id="roxwood">Roxwood Hills</h2>
+        <p>
+          Ubicada en la exclusiva zona residencial de Vinewood Hills, Roxwood funciona como punto de control para actividades de vigilancia, protección de autoridades y supervisión de eventos especiales. Su proximidad a centros gubernamentales la convierte en clave para la seguridad institucional.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Gallego ™ · San Andreas State Police · Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

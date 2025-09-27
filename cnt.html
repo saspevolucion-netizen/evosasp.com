@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>C.N.T. - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .bloque {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .bloque:nth-child(1) { animation-delay: 0.3s; }
+    .bloque:nth-child(2) { animation-delay: 0.5s; }
+    .bloque:nth-child(3) { animation-delay: 0.7s; }
+    .bloque:nth-child(4) { animation-delay: 0.9s; }
+    .bloque:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bloque.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .bloque img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .bloque img:hover {
+      transform: scale(1.03);
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .contenido h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contenido p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+    }
+
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .bloque, .bloque.reverso {
+        flex-direction: column;
+      }
+      .volver {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/wiwgpZP.png" alt="Logo SASP" class="logo">
+    <h1>CRISIS NEGOTIATION TEAM - C.N.T.</h1>
+  </header>
+
+  <div class="franja">
+    Calma bajo presión, diálogo ante el conflicto, vida como prioridad.
+  </div>
+
+  <div class="container">
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/Pdwa4lN.png" alt="Negociación táctica" />
+      <div class="contenido">
+        <h2>Negociación táctica en situaciones de riesgo</h2>
+        <p>
+          El C.N.T. es la unidad especializada en intervenciones mediante la palabra. Su objetivo es preservar vidas durante situaciones críticas como tomas de rehenes, intentos de suicidio o atrincheramientos. Sus agentes están formados en psicología de crisis, técnicas de persuasión y gestión emocional, interviniendo con humanidad, firmeza y precisión en momentos de máxima tensión.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/mYsfTrD.jpeg" alt="Intervenciones CNT" />
+      <div class="contenido">
+        <h2>¿El C.N.T. actúa solo en tomas de rehenes?</h2>
+        <p>
+          No. También participa en intervenciones con personas emocionalmente inestables, intentos de suicidio, amenazas graves o escenarios con riesgo de escalada violenta. El C.N.T. ofrece contención y negociación en situaciones donde la palabra puede salvar vidas.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/RHYXvcT.jpeg" alt="Perfil de negociador" />
+      <div class="contenido">
+        <h2>¿Qué perfil debe tener un negociador?</h2>
+        <p>
+          El negociador debe ser empático, paciente, emocionalmente equilibrado y tener una capacidad destacada para la escucha activa. Además, debe contar con formación especializada en psicología de crisis, comunicación táctica y resolución no violenta de conflictos.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque reverso">
+      <img src="https://i.imgur.com/TEElNbU.jpeg" alt="Intervención sin armas" />
+      <div class="contenido">
+        <h2>¿La unidad utiliza armas?</h2>
+        <p>
+          El C.N.T. no recurre a la fuerza como primer recurso. Su herramienta principal es el diálogo. Sin embargo, actúa en sincronía con unidades tácticas como SERT cuando el entorno representa un riesgo elevado o hay presencia de armas en escena.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <img src="https://i.imgur.com/wWAMXvZ.jpeg" alt="Negociaciones humanas" />
+      <div class="contenido">
+        <h2>¿Solo negocia con criminales?</h2>
+        <p>
+          No. El C.N.T. también interviene con ciudadanos en estado de crisis emocional, víctimas con bloqueo psicológico o personas necesitadas de mediación inmediata. Su labor es humanitaria, preventiva y vital en la protección de la vida.
+        </p>
+      </div>
+    </div>
+
+    <div class="volver">
+      <a href="acerca.html" class="btn">🡰 Volver a la página anterior</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

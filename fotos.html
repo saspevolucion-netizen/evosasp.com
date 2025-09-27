@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galería de Fotos - S.A.S.P.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #002244, #f1f1f1);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: dropHeader 1s ease forwards;
+    }
+
+    @keyframes dropHeader {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .franja {
+      background-color: #004477;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .galeria {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transform: scale(0.95);
+      opacity: 0;
+      animation: zoomIn 0.8s ease forwards;
+    }
+
+    .galeria img:nth-child(1) { animation-delay: 0.2s; }
+    .galeria img:nth-child(2) { animation-delay: 0.4s; }
+    .galeria img:nth-child(3) { animation-delay: 0.6s; }
+    .galeria img:nth-child(4) { animation-delay: 0.8s; }
+    .galeria img:nth-child(5) { animation-delay: 1s; }
+    .galeria img:nth-child(6) { animation-delay: 1.2s; }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s, transform 0.3s;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    /* Lightbox styles */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    #cerrar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/2gGSasD.png" alt="Logo SASP" class="logo" />
+    <h1>GALERÍA FOTOGRÁFICA</h1>
+  </header>
+
+  <div class="franja">
+    Imágenes que capturan el honor, la vocación y el compromiso del cuerpo.
+  </div>
+
+  <section class="galeria">
+    <img src="https://i.imgur.com/zTjRYUc.jpeg" alt="Formación de honor" />
+    <img src="https://i.imgur.com/Djbkfxw.jpeg" alt="Patrulla K9 en servicio" />
+    <img src="https://i.imgur.com/ABTuHFJ.jpeg" alt="Unidad aérea en maniobras" />
+    <img src="https://i.imgur.com/nVlWXW4.jpeg" alt="Agentes de gala" />
+    <img src="https://i.imgur.com/zcqlxbg.jpeg" alt="Ceremonia de ascensos" />
+    <img src="https://i.imgur.com/yv9QJVf.jpeg" alt="Brigada táctica en formación" />
+  </section>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="prensa.html" class="btn">📰 - Volver al área de prensa</a>
+  </div>
+
+  <footer>
+    &copy; Página web desarrollada por Gallegoo - Todos los derechos reservados
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="cerrar">✖</span>
+    <img id="imagen-ampliada" src="" alt="Imagen ampliada" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const imagenAmpliada = document.getElementById('imagen-ampliada');
+    const cerrar = document.getElementById('cerrar');
+
+    document.querySelectorAll('.galeria img').forEach(img => {
+      img.addEventListener('click', () => {
+        imagenAmpliada.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    cerrar.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      imagenAmpliada.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        imagenAmpliada.src = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
